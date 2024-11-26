@@ -8,6 +8,7 @@ import CoursesPage from './pages/CoursesPage';
 import AssignmentsPage from './pages/AssignmentsPage';
 import DashboardPage from './pages/DashboardPage';
 import StudyPlansPage from './pages/StudyPlansPage';
+import StudySessionsPage from './pages/StudySessionsPage';
 
 const App: React.FC = () => (
   <AuthProvider>
@@ -51,6 +52,14 @@ const App: React.FC = () => (
           element={
             <ProtectedRoute>
               <StudyPlansPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/sessions"
+          element={
+            <ProtectedRoute>
+              <StudySessionsPage />
             </ProtectedRoute>
           }
         />

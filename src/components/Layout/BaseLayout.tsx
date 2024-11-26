@@ -17,7 +17,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import BookIcon from '@mui/icons-material/Book';
 import AssignmentIcon from '@mui/icons-material/Assignment';
-import { BookmarkAdded } from '@mui/icons-material';
+import { BookmarkAdded, Timer } from '@mui/icons-material';
 
 const drawerWidth = 240;
 
@@ -27,6 +27,7 @@ const menuItems = [
     { text: 'Courses', path: '/courses', icon: <BookIcon /> },
     { text: 'Assignments', path: '/assignments', icon: <AssignmentIcon /> },
     { text: 'Study Plans', path: '/plans', icon: <BookmarkAdded /> },
+    { text: 'Study Sessions', path: '/sessions', icon: <Timer /> },
 ];
 
 interface BaseLayoutProps {
