@@ -1,9 +1,15 @@
 import apiClient from './axios';
-import { StudyPlanRequest, StudyPlanResponse } from '../types/plans';
+import { StudyPlanManualRequest, StudyPlanRequest, StudyPlanResponse } from '../types/plans';
 
 // Fetch all study plans
 export const fetchStudyPlans = async (): Promise<StudyPlanResponse[]> => {
   const response = await apiClient.get<StudyPlanResponse[]>('/plans/');
+  return response.data;
+};
+
+// Create a new study plan manually with custom fields (title, description, topics)
+export const createStudyPlan = async (data: StudyPlanManualRequest): Promise<StudyPlanResponse> => {
+  const response = await apiClient.post<StudyPlanResponse>('/plans/', data);
   return response.data;
 };
 

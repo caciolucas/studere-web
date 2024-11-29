@@ -3,6 +3,13 @@ export interface StudyPlanRequest {
   course_id: string;
 }
 
+export interface StudyPlanManualRequest {
+  title: string;      
+  description: string;
+  course_id: string;     
+  topics: StudyPlanTopic[];
+}
+
 export interface StudyPlanTopic {
   id: string;
   title: string;
