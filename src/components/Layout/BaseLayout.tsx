@@ -18,6 +18,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import BookIcon from '@mui/icons-material/Book';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import { BookmarkAdded, Timer } from '@mui/icons-material';
+import LogoutButton from '../Auth/LogoutButton.tsx'
 
 const drawerWidth = 240;
 
@@ -64,6 +65,10 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
                             </ListItem>
                         ))}
                     </List>
+                </Box>
+                {/* Logout Button */}
+                <Box sx={{ mt: 'auto', mb: 2, px: 2}}>
+                   <LogoutButton />
                 </Box>
             </Drawer>
 
