@@ -20,3 +20,9 @@ export interface StudySessionResponse {
   total_pause_time: number;
   status: 'active' | 'paused' | 'completed';
 }
+
+
+export interface StudySessionUpdateRequest {
+  notes: string;
+  topics: string[]; // Array of UUIDs
+}

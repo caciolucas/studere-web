@@ -1,5 +1,5 @@
 import apiClient from './axios';
-import { StudySessionRequest, StudySessionResponse } from '../types/sessions';
+import { StudySessionRequest, StudySessionResponse, StudySessionUpdateRequest } from '../types/sessions';
 
 // Start a study session
 export const startSession = async (data: StudySessionRequest): Promise<StudySessionResponse> => {
@@ -35,3 +35,11 @@ export const fetchSessionHistory = async (plan_id: string): Promise<StudySession
   const response = await apiClient.get<StudySessionResponse[]>(`/sessions/history/${plan_id}`);
   return response.data;
 }
+
+export const updateSession = async (
+  plan_id: string,
+  data: StudySessionUpdateRequest
+): Promise<StudySessionResponse> => {
+  const response = await apiClient.patch<StudySessionResponse>(`/sessions/by-plan/${plan_id}`, data);
+  return response.data;
+};
