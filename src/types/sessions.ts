@@ -18,6 +18,7 @@ export interface StudySessionResponse {
   started_at: string;
   ended_at: string | null;
   total_pause_time: number;
+  study_time: number;
   status: 'active' | 'paused' | 'completed';
 }
 

@@ -36,6 +36,11 @@ export const fetchSessionHistory = async (plan_id: string): Promise<StudySession
   return response.data;
 }
 
+export const fetchUserSessions = async (): Promise<StudySessionResponse[]> => {
+  const response = await apiClient.get<StudySessionResponse[]>('/sessions/all/');
+  return response.data;
+}
+
 export const updateSession = async (
   plan_id: string,
   data: StudySessionUpdateRequest
